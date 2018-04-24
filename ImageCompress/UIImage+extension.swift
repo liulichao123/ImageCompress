@@ -12,7 +12,8 @@ import UIKit
 extension UIImage {
     
     //推荐方法1
-    // maxLength (KB) 300 先压缩尺寸maxWidth,再压缩质量
+    
+    /// maxLength (KB) 300 先压缩尺寸maxWidth,再压缩质量
     func compress1(_ maxCount: Int = 300, maxWidth: Int = 750) -> UIImage? {
         let _max = maxCount * 1024
         guard let orginData = UIImageJPEGRepresentation(self, 1), orginData.count > _max else { return self }
@@ -47,7 +48,7 @@ extension UIImage {
         return nil
     }
     
-    // maxLength(默认300KBKB)  先压缩质量,再压缩尺寸
+    /// maxLength(默认300KBKB)  先压缩质量,再压缩尺寸
     func compress2(_ maxCount: Int = 300) -> UIImage? {
         let _max = maxCount * 1024
         guard var orginData = UIImageJPEGRepresentation(self, 1), orginData.count > _max else { return self }

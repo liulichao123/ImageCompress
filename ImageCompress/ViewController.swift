@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     var scale: CGFloat = 1
     @IBAction func compress(_ sender: Any) {
-        imageView.image = image.compress2(60)
+        imageView.image = image.compress1(200)
 //        let data = UIImageJPEGRepresentation(image, 0.01)!
 //        let img = UIImage(data: data)
 //        print("压缩后", data.count/1024, img?.cgImage?.width, img?.cgImage?.height)
